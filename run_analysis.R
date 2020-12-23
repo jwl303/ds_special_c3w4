@@ -81,3 +81,6 @@ for(num in 1:length(activities))
 ### 5th task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. START
 independent_X <- X2 %>% group_by(activity_name, subject_id) %>% summarise_all(mean)
 ### 5th task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. COMPLETE
+
+
+write.table(independent_X, file = 'independent_X.txt', row.names = FALSE)
